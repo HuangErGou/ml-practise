@@ -10,3 +10,7 @@ def get_x(df):
 
 def get_y(df):
     return np.array(df.iloc[:, -1])
+
+
+def normalize_feature(df):
+    return df.apply(lambda colum: (colum - colum.mean()) / colum.std())
